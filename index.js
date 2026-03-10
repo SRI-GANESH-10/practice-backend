@@ -27,14 +27,17 @@
 
 import userRouter from './validatios/joi.js';
 import express from 'express'
+import validatorRouter from './validatios/expressvalidator.js'
 const app = express();
 
 app.use(express.json())
 
-
+//!Using Joi For validations
 app.use('/users' , userRouter);
 
-//!Using Joi For validations
+//!using the express validator
+app.use('/express-validator' , validatorRouter)
+
 app.use((req , res , err , next)=>{
     if(!req.headers){
         res.statusCode(401).send({message:"UnAuthorised"})

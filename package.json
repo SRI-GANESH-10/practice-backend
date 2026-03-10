@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "express": "^5.2.1",
+    "express-validator": "^7.3.1",
     "joi": "^17.13.3"
   },
   "name": "prac",
